@@ -17,8 +17,19 @@ configNInputPulldown //N番目のポートを0,入力ポートにに設定
 
 from gpiozero import LED //LEDのクラスのみインポート
 
+名前=LED(N)
+
+名前.on() 名前.off()
+
 from gpiozero import PWMLED
 
 クラスを受ける名前=PWLED(ポート番号)
 名前.value //LEDの光量の参照及び変更
 
+from gpiozero import Button
+
+名前=Button(N,pull_up=flag)
+
+名前.when_pressed=関数
+
+名前.is_pressed //押下判定
