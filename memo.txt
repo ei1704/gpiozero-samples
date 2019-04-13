@@ -1,0 +1,24 @@
+3/16
+  
+--scratch--
+
+
+gpioserveron
+↓
+configNout //N番目のポートを出力に設定
+↓
+gpioNとonORoff //onかoffか
+
+configNInputPulldown //N番目のポートを0,入力ポートにに設定
+↓
+センサーの値
+
+--python--
+
+from gpiozero import LED //LEDのクラスのみインポート
+
+from gpiozero import PWMLED
+
+クラスを受ける名前=PWLED(ポート番号)
+名前.value //LEDの光量の参照及び変更
+
